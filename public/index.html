@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store - Shop Latest Fashion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="store-title">Fashion Hub</h1>
+                <div class="nav-controls">
+                    <button id="cart-btn" class="cart-btn">
+                        🛒 Cart (<span id="cart-count">0</span>)
+                    </button>
+                    <button id="share-cart-btn" class="share-btn">Share Cart</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <h2>Welcome to Fashion Hub</h2>
+            <p>Discover the latest trends in clothing and accessories</p>
+        </section>
+
+        <section class="filters">
+            <h3>Filter by Category</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All Items</button>
+                <button class="filter-btn" data-category="shirts">Shirts</button>
+                <button class="filter-btn" data-category="jeans">Jeans</button>
+                <button class="filter-btn" data-category="hoodies">Hoodies</button>
+                <button class="filter-btn" data-category="shoes">Shoes</button>
+                <button class="filter-btn" data-category="dresses">Dresses</button>
+                <button class="filter-btn" data-category="jackets">Jackets</button>
+            </div>
+        </section>
+
+        <section class="products" id="products-container">
+            <!-- Products will be loaded here by JavaScript -->
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Shopping Cart</h2>
+                <span class="close" id="close-cart">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="cart-items">
+                    <!-- Cart items will be displayed here -->
+                </div>
+                <div class="cart-total">
+                    <h3>Total: $<span id="cart-total">0.00</span></h3>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+                <button id="clear-cart-btn" class="clear-cart-btn">Clear Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="product-title">Product Details</h2>
+                <span class="close" id="close-product">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="product-details">
+                    <img id="product-image" src="" alt="" class="product-detail-img">
+                    <div class="product-info">
+                        <p class="product-price">$<span id="product-price">0.00</span></p>
+                        <div class="size-selection">
+                            <label for="size-select">Size:</label>
+                            <select id="size-select">
+                                <!-- Size options will be populated by JavaScript -->
+                            </select>
+                        </div>
+                        <div class="quantity-selection">
+                            <label for="quantity-select">Quantity:</label>
+                            <input type="number" id="quantity-select" min="1" value="1">
+                        </div>
+                        <button id="add-to-cart-btn" class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div id="share-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Share Your Cart</h2>
+                <span class="close" id="close-share">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Share your cart with friends!</p>
+                <div id="share-content">
+                    <!-- Share link will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

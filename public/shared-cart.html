@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared Cart - Fashion Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="store-title">Fashion Hub</h1>
+                <div class="nav-controls">
+                    <a href="/" class="nav-link">Back to Store</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <h2>Shared Cart</h2>
+            <p>Someone shared their cart with you!</p>
+        </section>
+
+        <section class="shared-cart-content">
+            <div id="shared-cart-items" class="cart-items-display">
+                <!-- Shared cart items will be displayed here -->
+            </div>
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <h3>Total: $<span id="shared-cart-total">0.00</span></h3>
+                </div>
+                <div class="cart-actions">
+                    <button id="copy-to-my-cart-btn" class="copy-cart-btn">Copy to My Cart</button>
+                    <a href="/" class="continue-shopping-btn">Continue Shopping</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="shared-cart.js"></script>
+</body>
+</html>
