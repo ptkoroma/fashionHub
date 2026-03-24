@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === 'production') {
 
 // Mock clothing data
 const clothingItems = [
-  { id: 1, name: 'Classic White T-Shirt', price: 19.99, category: 'shirts', image: 'https://via.placeholder.com/300x300?text=White+T-Shirt', size: ['S', 'M', 'L', 'XL'] },
+  { id: 1, name: 'Classic White T-Shirt', price: 19.99, category: 'shirts', image: "https://image2url.com/r2/default/images/1773460548608-662068d9-01cf-4be3-996f-6f690807a474.jpeg", size: ['S', 'M', 'L', 'XL'] },
   { id: 2, name: 'Blue Denim Jeans', price: 59.99, category: 'jeans', image: 'https://via.placeholder.com/300x300?text=Blue+Jeans', size: ['28', '30', '32', '34', '36'] },
   { id: 3, name: 'Red Hoodie', price: 45.99, category: 'hoodies', image: 'https://via.placeholder.com/300x300?text=Red+Hoodie', size: ['S', 'M', 'L', 'XL'] },
   { id: 4, name: 'Black Sneakers', price: 89.99, category: 'shoes', image: 'https://via.placeholder.com/300x300?text=Black+Sneakers', size: ['7', '8', '9', '10', '11', '12'] },
